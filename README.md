@@ -8,18 +8,18 @@ To begin, ensure that Rust is installed on your system. Use the following comman
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-Additionally, you will need to install `clang`:
+Additionally, you will need to install `git` and `clang`:
 
 #### For Debian-based systems:
 
 ```bash
-sudo apt install libclang-dev clang
+sudo apt install libclang-dev clang git
 ```
 
 #### For RHEL-based systems:
 
 ```bash
-sudo yum install clang
+sudo yum install clang git
 ```
 
 ### 2. Install PostgreSQL Dependencies
