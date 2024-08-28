@@ -38,18 +38,17 @@ sudo apt-get install build-essential libreadline-dev zlib1g-dev flex bison libxm
 sudo yum install -y bison-devel readline-devel zlib-devel openssl-devel wget ccache && sudo yum groupinstall -y 'Development Tools'
 ```
 
-### 3. Clone the Repository
-
-Clone the `pg_base58` repository from GitHub:
+### 3. Clone the Repository and install dependencies
 
 ```bash
 git clone https://github.com/Fell-x27/pg_base58.git
 cd pg_base58
+cargo fetch
 ```
 
 ### 4. Build the Extension
 
-Navigate to the project directory and build the extension using the following command:
+Inside the project directory build the extension using the following command:
 
 ```bash
 cargo pgrx package
