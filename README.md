@@ -2,24 +2,23 @@
 
 ### 1. Install Rust
 
-To begin, ensure that Rust is installed on your system. Use the following command to install Rust:
-
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-```
-
-Additionally, you will need to install `git` and `clang`:
-
+As first, you will need to install some dependencies:
 #### For Debian-based systems:
 
 ```bash
-sudo apt install libclang-dev clang git
+sudo apt update && sudo apt install libclang-dev clang git curl
 ```
 
 #### For RHEL-based systems:
 
 ```bash
-sudo yum install clang git
+sudo yum makecache && sudo yum install clang clang-devel git curl
+```
+
+Then, ensure that Rust is installed on your system. Use the following command to install Rust:
+
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
 ### 2. Install PostgreSQL Dependencies
@@ -43,7 +42,8 @@ sudo yum install -y bison-devel readline-devel zlib-devel openssl-devel wget cca
 ```bash
 git clone https://github.com/Fell-x27/pg_base58.git
 cd pg_base58
-cargo fetch
+cargo install cargo-pgrx
+cargo pgrx init
 ```
 
 ### 4. Build the Extension
