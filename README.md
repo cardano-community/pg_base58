@@ -1,3 +1,6 @@
+# DEPRECATED
+This repo was overhauled by [pg_cardano](https://github.com/cardano-community/pg_cardano)
+
 ## Installation and Usage
 
 ### 1. Install Rust
